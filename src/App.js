@@ -1,12 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Chat from './Chat';
+import Users from './Users';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      This will be an chat app
-    </div>
+    <Router>
+      <>
+        <div className='container-fluid mt-5'>
+            <div className='row'>
+                <Users></Users>
+                <Routes>
+                  {/* 👇️ handle dynamic path */}
+                  <Route path="chat/:userId" element={<Chat />}/>
+                  <Route path="/" element={<Chat />} />
+                  {/* 👇️ only match this when no other routes match */}
+                  <Route
+                    path="*"
+                    element={
+                      <Chat />
+                    }
+                  />
+                </Routes>          
+            </div>
+        </div> 
+      </>
+    </Router>
   );
 }
 
-export default App;
+

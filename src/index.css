@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.vh-80{
+  min-height: 90vh;
+}
+.max-vh-80{
+  height: 80vh;
+  min-height: 90vh;
+
+}
+.icons{
+  cursor: pointer;
+}
+.icons:hover{
+  color : rgb(233, 129, 59)!important;
+}
+.logoimg{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius : 80% ;
+}
+.fullsize{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius : 80% ;
+}
