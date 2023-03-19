@@ -1,7 +1,7 @@
 import './App.css';
-import Users from './Users';
+import Users from './model/Users';
 import Chat from './Chat';
-import Info from './Info';
+import Info from './model/Info';
 import {Route} from "react-router-dom"
 function Main() {
   return (
@@ -13,8 +13,6 @@ function Main() {
               <div className="col-md-2 d-md-block d-none"><Info></Info></div>
           </div>
       </div>  */}
-      
-
     </>
  
   );

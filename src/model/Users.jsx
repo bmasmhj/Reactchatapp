@@ -1,5 +1,5 @@
-import './App.css';
-import './Chat.css';
+import '../style/App.css';
+import '../style/Chat.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -29,8 +29,9 @@ function Users() {
               </div>
           </li>
       </NavLink>
-      
         </ul>
+        <button className="btn bg-gradient-danger">Sign Out</button>
+
     </div>
     </div>
 

@@ -1,11 +1,10 @@
-import './App.css';
 import Info from './Info';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Chat = () => {
   const params  = useParams();
-  if(params.userId == 'community'){
+  if(params.userId === 'community'){
     return (
       <>
       <div className="col-md-8 d-md-block d-none" id='chatpart'>

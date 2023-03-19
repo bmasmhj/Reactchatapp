@@ -1,7 +1,8 @@
 import React from 'react';
-import Chat from './Chat';
-import Users from './Users';
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import Chat from './model/Chat';
+import Users from './model/Users';
+import { socket } from './socket';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 export default function App() {
   return (
@@ -11,10 +12,8 @@ export default function App() {
             <div className='row'>
                 <Users></Users>
                 <Routes>
-                  {/* 👇️ handle dynamic path */}
                   <Route path="chat/:userId" element={<Chat />}/>
                   <Route path="/" element={<Chat />} />
-                  {/* 👇️ only match this when no other routes match */}
                   <Route
                     path="*"
                     element={
